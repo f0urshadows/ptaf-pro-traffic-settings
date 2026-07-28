@@ -2,7 +2,7 @@
 
 Chrome/Edge extension for working with PTAF `/api/ptaf/v4/config/traffic_settings/`.
 
-## v0.3.0
+[## v0.3.0](https://github.com/f0urshadows/ptaf-pro-traffic-settings/blob/main/ptaf-traffic-settings-client-v0.3.0.zip)
 
 - Authentication settings are moved into a collapsible block.
 - Existing saved connection profile keeps the auth block collapsed by default.
