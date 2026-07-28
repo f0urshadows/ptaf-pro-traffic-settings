@@ -2,6 +2,8 @@
 
 Chrome/Edge extension for working with PTAF `/api/ptaf/v4/config/traffic_settings/`.
 
+<img width="640" height="543" alt="изображение" src="https://github.com/user-attachments/assets/7ee2edbd-f25e-4e7d-9f24-99ebe18d3ad5" />
+
 ## v0.3.0
 
 [Download](https://github.com/f0urshadows/ptaf-pro-traffic-settings/raw/refs/heads/main/ptaf-traffic-settings-client-v0.3.0.zip)
