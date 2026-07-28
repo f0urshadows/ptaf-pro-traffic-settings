@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "PTAF Traffic Settings Client",
+  "version": "0.3.0",
+  "description": "GET/PATCH PTAF traffic settings with encrypted password storage, compact editor and patch status logging.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+    "default_title": "PTAF Traffic Settings",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

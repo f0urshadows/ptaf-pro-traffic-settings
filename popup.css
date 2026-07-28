@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 640px;
+  max-width: 840px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f4f6fb;
+}
+
+.app {
+  padding: 10px;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 17px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.card {
+  margin-bottom: 8px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #dde3ef;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(18, 38, 63, 0.05);
+}
+
+details.card > summary,
+.log-card summary,
+.raw-json-block summary {
+  cursor: pointer;
+  user-select: none;
+}
+
+details.card > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.summary-status,
+.counter,
+.last-patch {
+  color: #607086;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.last-patch {
+  margin: 0;
+  text-align: right;
+}
+
+.auth-content {
+  margin-top: 8px;
+}
+
+.compact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 3px;
+  padding: 6px 8px;
+  border: 1px solid #c8d1e1;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 12px;
+  background: #ffffff;
+}
+
+input {
+  height: 31px;
+}
+
+textarea {
+  min-height: 72px;
+  resize: vertical;
+  line-height: 1.35;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.row.three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+button {
+  width: 100%;
+  min-height: 31px;
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  color: #ffffff;
+  background: #295fcc;
+}
+
+button.secondary {
+  color: #244060;
+  background: #e8eef9;
+}
+
+button.danger {
+  background: #c83b3b;
+}
+
+button.danger.secondary {
+  color: #8a2424;
+  background: #f8e7e7;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.hint {
+  min-height: 14px;
+  margin: 5px 0 0;
+  font-size: 11px;
+  color: #5a687d;
+}
+
+.hint.strong {
+  color: #334155;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 74px 86px 74px 1fr;
+  gap: 7px;
+  align-items: center;
+}
+
+.toolbar input {
+  margin-top: 0;
+}
+
+.settings-editor {
+  overflow: auto;
+  max-height: 520px;
+  margin-top: 8px;
+  padding-right: 3px;
+}
+
+.settings-editor.empty {
+  padding: 10px;
+  border: 1px dashed #c8d1e1;
+  border-radius: 10px;
+  color: #5a687d;
+  background: #f8fafc;
+  font-size: 12px;
+}
+
+.setting-row {
+  display: grid;
+  grid-template-columns: minmax(235px, 0.9fr) minmax(250px, 1.1fr);
+  gap: 8px;
+  align-items: start;
+  margin: 5px 0;
+  padding: 7px 8px;
+  border: 1px solid #dde3ef;
+  border-radius: 9px;
+  background: #fbfdff;
+}
+
+.setting-row[hidden] {
+  display: none;
+}
+
+.setting-top {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.setting-name {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  color: #152238;
+}
+
+.type-badge {
+  flex: 0 0 auto;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 750;
+  color: #41516a;
+  background: #eef3fb;
+}
+
+.checkbox-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 31px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.checkbox-line input {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.setting-control-wrap {
+  min-width: 0;
+}
+
+.setting-control-wrap input,
+.setting-control-wrap textarea {
+  margin-top: 0;
+}
+
+.json-value {
+  min-height: 58px;
+}
+
+.string-value {
+  min-height: 48px;
+}
+
+.raw-json-block {
+  margin-top: 9px;
+}
+
+.raw-json-block summary,
+.log-card summary {
+  font-size: 12px;
+  font-weight: 750;
+  color: #334155;
+}
+
+pre {
+  overflow: auto;
+  max-height: 180px;
+  margin: 8px 0 0;
+  padding: 9px;
+  border-radius: 9px;
+  background: #111827;
+  color: #e5edf8;
+  font-size: 11px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

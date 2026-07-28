@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PTAF Traffic Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>PTAF Traffic Settings</h1>
+      <p id="lastPatchStatus" class="last-patch">Последний успешный PATCH: нет данных.</p>
+    </header>
+
+    <details id="authDetails" class="card auth-card">
+      <summary>
+        <span>Подключение и аутентификация</span>
+        <span id="profileSummary" class="summary-status">не настроено</span>
+      </summary>
+
+      <div class="auth-content">
+        <div class="compact-grid">
+          <label>
+            MGMT VIP
+            <input id="mgmtVip" autocomplete="off" placeholder="https://10.10.10.10">
+          </label>
+
+          <label>
+            Username
+            <input id="username" autocomplete="username" placeholder="admin">
+          </label>
+        </div>
+
+        <label>
+          Password PTAF
+          <input id="password" type="password" autocomplete="current-password" placeholder="введи при первом сохранении или для замены">
+        </label>
+
+        <p class="hint strong">Fingerprint: <code>212fa142fd787bf2e9fd3fb13872d2be</code></p>
+        <p class="hint">Пароль шифруется локальным non-extractable AES-GCM ключом браузера.</p>
+
+        <div class="row three auth-actions">
+          <button id="saveProfile">Сохранить</button>
+          <button id="testConnection" class="secondary">Проверить вход</button>
+          <button id="clearProfile" class="danger secondary">Удалить профиль</button>
+        </div>
+        <p id="profileHint" class="hint"></p>
+      </div>
+    </details>
+
+    <section class="card settings-card">
+      <div class="section-title-row">
+        <h2>Traffic settings</h2>
+        <span id="settingsCount" class="counter">0 параметров</span>
+      </div>
+
+      <div class="toolbar">
+        <button id="getSettings">GET</button>
+        <button id="patchSettings" class="danger">PATCH</button>
+        <button id="copyJson" class="secondary">JSON</button>
+        <input id="filterSettings" autocomplete="off" placeholder="поиск: nginx, timeout, log_level">
+      </div>
+
+      <div id="settingsEditor" class="settings-editor empty">
+        Нажми GET, чтобы построить форму редактирования параметров.
+      </div>
+
+      <details class="raw-json-block">
+        <summary>Raw JSON fallback</summary>
+        <label>
+          JSON для ручного PATCH, если форма ещё не загружена
+          <textarea id="patchJson" spellcheck="false" placeholder='{"example_key": "example_value"}'></textarea>
+        </label>
+      </details>
+    </section>
+
+    <section class="card log-card">
+      <details open>
+        <summary>Лог и результат</summary>
+        <pre id="output">Готово к работе.</pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
